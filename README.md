@@ -12,9 +12,7 @@ Report will be generated as JSON format.
 
 ### Prerequisites
 
-You need to install Inspector Agents on your target EC2 instances.
-
-[Agent](https://docs.aws.amazon.com/inspector/latest/userguide/inspector_installing-uninstalling-agents.html)
+You need to install Inspector Agents on your target EC2 instances. [Agent](https://docs.aws.amazon.com/inspector/latest/userguide/inspector_installing-uninstalling-agents.html)
 
 You have a SNS Topic to send messsages and subscribe to notifications if you want to receive Inspector assessment events.
 
@@ -77,13 +75,12 @@ Run a scan with existing template
 
 ```
 python main.py -e "arn:aws:inspector:us-east-1:123456789012:target/0-psUXm9GN/template/0-ZoyR7tVn" 
-
 ```
 
 Genearte a report
 
 ```
-python main.py -R -a "arn:aws:inspector:us-east-1:844647875270:target/0-psUXm9GN/template/0-ZoyR7tXn" -s "High Medium" -i "i-0c6c57d1e60e19320" -f "i-0c6c57d1e60e19320_report.json"
+python main.py -R -a "arn:aws:inspector:us-east-1:123456789012:target/0-psUXm9GN/template/0-ZoyR7tXn" -s "High Medium" -i "i-0c6c57d1e60e19320" -f "i-0c6c57d1e60e19320_report.json"
 ```
 
 ### And coding style tests
@@ -92,7 +89,6 @@ Use pycodestyle
 
 ```
 pycodestyle *.py
-
 ```
 
 ## Deployment
